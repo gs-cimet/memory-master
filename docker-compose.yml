@@ -1,0 +1,52 @@
+version: "3"
+name: memory-master
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: memory-master-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mem-master
+      - MONGO_INITDB_ROOT_PASSWORD=mem-junior
+    networks:
+      - memory-master
+    volumes:
+      - mongodb:/data/db
+  frontend:
+    build: 
+      context: ./client
+      # dockerfile: ./client/Dockerfile
+      args:
+        - NODE_ENV=development
+    image: "memory-master-web"
+    ports:
+      - 8004:8004
+    env_file:
+      - ./client/.env.development.local
+    depends_on:
+      - backend
+    networks:
+      - memory-master
+    volumes:
+      - ./client:/app
+  backend:
+    build:
+      context: ./server # dockerfile dir
+      # dockerfile: ./server/Dockerfile 
+      args: 
+        - NODE_ENV=development
+    image: "memory-master-api"
+    ports:
+      - 8005:8005
+    env_file:
+      - ./server/.env.development.local
+    depends_on: 
+      - mongodb
+    networks:
+      - memory-master
+    volumes:
+      - ./server:/app
+
+networks:
+  memory-master: 
+volumes:
+  mongodb:
