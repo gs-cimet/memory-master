@@ -1,0 +1,54 @@
+{
+  "allPosts": [
+    {
+      "tags": ["date", "mikesh"],
+      "likeCount": 5,
+      "createdAt": "2023-09-23T02:01:22.322Z",
+      "_id": "650e871f6531dd0021d12836",
+      "title": "Funny Post Title",
+      "message": "This is my first date",
+      "creator": "Mikesh",
+      "selectedFile": "cypress/fixtures/assets/post-01.jpeg"
+    },
+    {
+      "tags": ["date", "mikesh"],
+      "likeCount": 0,
+      "createdAt": "2023-09-23T02:01:22.322Z",
+      "_id": "650e871f6531dd0021d12838",
+      "title": "Dream ride",
+      "message": "start of many experiences",
+      "creator": "Mikesh",
+      "selectedFile": "cypress/fixtures/assets/post-01.jpeg"
+    }
+  ],
+  "createPost": {
+    "tags": ["date", "mikesh"],
+    "likeCount": 0,
+    "createdAt": "2023-09-23T02:01:22.322Z",
+    "_id": "650e871f6531dd0021d12848",
+    "title": "Carva",
+    "message": "Journeuy for me",
+    "creator": "Pinku",
+    "selectedFile": "cypress/fixtures/assets/post-01.jpeg"
+  },
+  "trimTags": {
+    "tags": [" date ", "", " mikesh "],
+    "likeCount": 0,
+    "createdAt": "2023-09-23T02:01:22.322Z",
+    "_id": "650e871f6531dd0021d12895",
+    "title": "New ride to woods",
+    "message": "just a refreshening journey",
+    "creator": "Tyoku",
+    "selectedFile": "cypress/fixtures/assets/post-01.jpeg"
+  },
+  "updatePost": {
+    "tags": ["mikey", "dreams", "experiences"],
+    "likeCount": 0,
+    "createdAt": "2023-09-23T02:01:22.322Z",
+    "_id": "650e871f6531dd0021d12848",
+    "title": "Where it takes",
+    "message": "it's full of wild rides and experiences",
+    "creator": "Mikesh with Mikey",
+    "selectedFile": "cypress/fixtures/assets/post-01.jpeg"
+  }
+}
